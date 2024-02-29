@@ -41,14 +41,23 @@ if inicio.lower() == "s":
       lista_numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
       while True:
+            entrada_mes = input('Utilize os números de 1 a 12 para identificar o mês e caso se perca, digita "meses.\nDigite o mês (e.g 1 corresponde a Janeiro):')
+#Entrega a possibilidade ao usuário de ver o dict caso se perca
+            if entrada_mes.lower() == "meses":
+                 limpar_tela()
+                 if meses_lista_validacao == []:
+                      print('Nenhum mês cadastrado')
+                 else:
+                      print(f'Você já cadastrou as informações: {meses_e_temperaturas}')
 #Confirma se o input é um número e informa ao usuário a melhor forma de notação
             try:
-                  entrada_mes = input('Digite o mês. Utilize os números de 1 a 12 para identificá-lo.\n(e.g 1 corresponde a Janeiro):')
                   entrada_mes = int(entrada_mes)
             except:
-                  limpar_tela()
-                  print('Insira apenas números entre 1 e 12, correspondentes de Janeiro até Dezembro.')
-                  continue
+                  if entrada_mes.lower() == "meses":
+                       continue
+                  else:
+                       print('Insira apenas números entre 1 e 12, correspondentes de Janeiro até Dezembro.')
+                       continue
             
 #Confirma se o input está entre 1 e 12 e informa ao usuário caso não seja
             if 1 <= entrada_mes <= 12:
@@ -68,12 +77,13 @@ if inicio.lower() == "s":
                               print('Digite apenas "S" ou "N"')
                               continue
 #Entrada da Temperatura e validação 
-                  limpar_tela()
                   try:
+                        limpar_tela()
                         entrada_temperatura = input(f'Digite a temperatura do mês {meses_por_extenso[str(entrada_mes)]} em graus celcius: ')
                         entrada_temperatura = float(entrada_temperatura.replace(",","."))
                         if -60 <= entrada_temperatura <= 50:
                               meses_e_temperaturas[entrada_mes] = entrada_temperatura
+                              limpar_tela()
                         else:
                               print('Digite apenas números entre "-60" e "50ºC". (E.g 28,7)')
                               continue
@@ -134,6 +144,3 @@ elif inicio.lower() == "n":
 else:
     limpar_tela()
     print("Hum, falhei nas instruções. Recomeça o programa e digita 'S' ou 'N'")
-
-#Acredito que o código tenha ficado gigantesco, tudo pela decisão de usar dict e lista 😂
-#As aulas estão excelentes, muito obrigado!
