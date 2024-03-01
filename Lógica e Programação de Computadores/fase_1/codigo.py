@@ -19,7 +19,7 @@ inicio = input('Podemos iniciar? Digite "S" para sim e "N" para não: ')
 if inicio.lower() == "s":
       limpar_tela()
 
-#Escrita dos meses para melhor visualização ao realizar input e corrigir dados
+#Escrita dos meses para melhor visualização ao realizar input de temperatura e corrigir dados
       meses_por_extenso = {
     "1": "Janeiro",
     "2": "Fevereiro",
@@ -41,8 +41,8 @@ if inicio.lower() == "s":
       lista_numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
       while True:
-            entrada_mes = input('Utilize os números de 1 a 12 para identificar o mês e caso se perca, digita "meses.\nDigite o mês (e.g 1 corresponde a Janeiro):')
-#Entrega a possibilidade ao usuário de ver o dict caso se perca
+            entrada_mes = input('Utilize os números de 1 a 12 para identificar o mês de Janeiro a Dezembro. \nCaso se perca, digita "meses" para acessar os dados já inseridos.\nDigite o mês:')
+#Possibilidade do usuário de ver o dict caso se perca
             if entrada_mes.lower() == "meses":
                  limpar_tela()
                  if meses_lista_validacao == []:
@@ -68,7 +68,8 @@ if inicio.lower() == "s":
                               )
                         duplicada = input('Digite "S" para sim e "N" para não: ')
                         if duplicada.lower() == "s":
-                              ... #Mantive "..." para pular para próxima parte. Ao utilizar break o código para.
+                              ... 
+                              #Mantive "..." para pular para próxima parte. Ao utilizar break o código para.
                         elif duplicada.lower() == "n":
                               limpar_tela()
                               continue
@@ -112,7 +113,7 @@ if inicio.lower() == "s":
       media_maxima_anual = media_maxima_anual/12
       print(f'A temperatura média máxima anual foi de {media_maxima_anual:.2f}ºC')
 
-      #Meses escaldantes
+#Meses escaldantes
       escaldante = 0
       for temperatura in meses_e_temperaturas.values():
            if temperatura > 33:
@@ -124,8 +125,8 @@ if inicio.lower() == "s":
            print(f'Houve {escaldante} mês com temperatura a cima da média de 33ºC')
 
 
-      #Mês mais escaldante do ano
-#Ordena os valores do Dict, o seleciona e imprime o mês correspondente com maior e menor temperatura
+#Mês mais escaldante do ano
+#Ordena os valores do Dict, seleciona e imprime o mês correspondente com maior e menor temperatura
       meses_ordenados = sorted(meses_e_temperaturas.values())
       maior_temperatura = meses_ordenados[-1]
       menor_temperatura = meses_ordenados[0]
