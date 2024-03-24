@@ -226,14 +226,14 @@ if inicio.lower() == "s":
                             tipo_dados = "todos"
                             banco_tupla = intervalo_de_dados(dados, mes_inicial, mes_final, ano_inicial, ano_final,tipo_dados)
                             for data, precipitacao, minima, maxima, horas_insol, media, umidade, vento in banco_tupla:
-                                print(f'Data: {data}, Precipitação {precipitacao}mm, Temp.mínima: {minima}ºC, Temp.máxima: {maxima}ºC, Horas insolaradas: {horas_insol}h Temp.média: {media}ºC, Umidade: {umidade}g/m³, Vento: {vento}m/s')
+                                print(f'Data: {data}, Precipitação {precipitacao}m², Temp.mínima: {minima}ºC, Temp.máxima: {maxima}ºC, Horas insolaradas: {horas_insol}h Temp.média: {media}ºC, Umidade: {umidade}%, Vento: {vento}m/s')
 
                         elif escolha_opcao_1 == 2:
                         #Exibe no prompt apenas data e dados de precipitação.
                             tipo_dados = "precip"
                             banco_tupla = intervalo_de_dados(dados, mes_inicial, mes_final, ano_inicial, ano_final,tipo_dados)
                             for data, precipitacao in banco_tupla:
-                                print(f'Data: {data}, Precipitação {precipitacao}mm')
+                                print(f'Data: {data}, Precipitação {precipitacao}m²')
                         
                         elif escolha_opcao_1 == 3:
                         #Exibe no prompt apenas data e dados de temperatura.
@@ -247,7 +247,7 @@ if inicio.lower() == "s":
                             tipo_dados = "umidade_vento"
                             banco_tupla = intervalo_de_dados(dados, mes_inicial, mes_final, ano_inicial, ano_final,tipo_dados)
                             for data, umidade, vento in banco_tupla:
-                                print(f'Data: {data}, Umidade: {umidade}g/m³, Vento: {vento}m/s')
+                                print(f'Data: {data}, Umidade: {umidade}%, Vento: {vento}m/s')
 
                     #até que algo seja digitado, impede que um novo loop inicie no promtp e o encha de texto.
                         continuar = input("Insira qualquer caracter para dar continuidade: ")
