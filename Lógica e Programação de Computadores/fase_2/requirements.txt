@@ -1,0 +1,3 @@
+matplotlib
+
+#banco de dados da cadeira não fornecido para download neste git.
