@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <title>Ficha de Cadastro</title>
+</head>
+<body>
+    <div>
+        <form action="https://formsubmit.co/arthurzkrause@gmail.com" method="POST">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <label>Nome</label>
+                <input type="text" name="nome" placeholder="Qual seu nome?" required><br><br>
+
+                <label>E-mail</label>
+                <input type="email" name="email" placeholder="Insira seu e-mail" required>
+
+                <label>Senha</label>
+                <input type="password" name="senha" placeholder="Crie uma senha" minlength="8" required>
+                <br><br>
+
+                <label>Telefone para contato</label>
+                <input type="tel" name="fone" placeholder="(ddd) XXX.XXX.XXX" pattern = "[0-9]{11}" required>
+                <br><br>  
+            <fieldset>
+                <legend>Endereço</legend>
+                <label>Rua</label>
+                <input type="text" name="rua" placeholder="Qual o nome da sua rua?" required>
+
+                <label>Número</label>
+                <input type="text" name="Número" placeholder="Qual o número?" required>
+
+                <label>Complemento</label>
+                <input type="text" name="Complemento" placeholder="Tem complemento?"><br><br> 
+
+                <label>No momento atendemos apenas em Porto Alegre.<br> Você mora na cidade?</label>
+                    <br/>
+                        <label>Sim</label>
+                        <input type="radio" name="Poa_Sim" value="sim" />
+                        <label>Não</label>
+                        <input type="radio" name="Poa_Não" value="não" />   
+            </fieldset><br>             
+
+            <fieldset>
+                <legend>Pet</legend>
+                <p>Qual a espécie do seu pet?
+                    <select name="espécie">
+                        <option value="Cachorro">Cachorro</option>
+                        <option value="Gato">Gato</option>
+                    </select>
+                    </p>
+
+                <p>Como é o temperamento do seu pet?
+                    <select name="temperamento">
+                        <option value="Afetuoso">Afetuoso</option>
+                        <option value="Calmo">Calmo</option>
+                        <option value="Cauteloso">Cauteloso</option>
+                        <option value="Desconfiado">Desconfiado</option>
+                        <option value="Feroz">Feroz</option>
+                    </select>
+                    </p>
+
+                <p>Seu Pet é macho ou fêmea?
+                    <select name="sexo do pet">
+                        <option value="Macho">Macho</option>
+                        <option value="Fêmea">Fêmea</option>
+                    </select>
+                    </p>
+
+                <label>Já é vacinado?</label>
+                    <br/>
+                        <label>Sim</label>
+                        <input type="radio" name="vacina_Sim" value="sim" />
+                        <label>Não</label>
+                        <input type="radio" name="vacina_Não" value="não" />
+                        <br>
+                </fieldset><br>
+                
+                <legend>Gostaria de adicionar um comentário?</legend>
+                <textarea name="comentario" cols="50" rows="5"></textarea>
+                <br><br>
+
+                <label>Envie uma foto do seu Pet!</label>
+                <input type = "file" name="arquivo_foto"><br><br>
+
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+<body>
+    <form action="...1..." method="POST">
+        <fieldset>
+            <legend>Vacinas</legend>
+
+            <label>Nome do animal</label>
+            <input tyoe="text" name="nome"><br><br>
+
+            <legend>Escolha a vacina</legend>
+                <div>
+                    <input type="checkbox" id="FPV" name="FPV"  />
+                    <label for="FPV">FPV</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="FHV-1" name="FHV-1" />
+                    <label for="FHV-1">FHV-1</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="CDV" name="CDV" />
+                    <label for="CDV">CDV</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="CPV" name="CPV" />
+                    <label for="CPV">CPV</label>
+                </div>           
+                <br>
+
+            <label></label>Escolha a data e horário para vaciná-lo</label>
+            <input type="datetime-local" name="agenda"/><br><br>
+
+            <button type="submit">Enviar</button>
+
+        </fieldset>
+    </form>
+</body>
+
+</html>
