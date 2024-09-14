@@ -1,0 +1,470 @@
+/* style.css */
+
+/* Estilos para o nome da pet shop na faixa branca */
+.header-banner {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.header-banner h1 {
+    margin: 0;
+    font-size: 5em;
+    color: #181818;;
+    font-weight: bold;
+}
+
+/* Estilos para a faixa de navegação */
+.main-nav {
+    background-color: #181818;
+    padding: 15px 0;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: #3369ff; /* Cor de destaque ao passar o mouse */
+}
+
+/* Estilos para a imagem estática */
+.static-image {
+    max-width: 100%;
+    max-height: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.static-image img {
+    width: 100%;
+    height: 300px; /* Mantém a proporção da imagem */
+    border-radius: 10px;
+    object-fit: cover; /* Faz com que a imagem se ajuste ao container */
+}
+
+/* Estilos para a seção de produtos */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product-info {
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #333;
+}
+
+.product-info .price {
+    font-size: 1.1em;
+    color: #e60000;
+    margin: 5px 0;
+}
+
+.product-info .weight {
+    font-size: 1em;
+    color: #555;
+}
+
+.product-image img {
+    max-width: 100px;
+}
+
+.product-popup {
+    display: none;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    color: #555;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 10;
+}
+
+.product:hover .product-popup {
+    display: block;
+}
+
+
+/* Estilos para as seções de conteúdo */
+.info-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.info-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.info-section p {
+    font-size: 1.2em;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Estilos para o formulário de vacinação */
+.vaccination-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group button {
+    background-color: #3369ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+.teleconsultation-details {
+    margin-top: 15px;
+}
+
+/* Adicione uma regra para exibir/ocultar detalhes da teleconsulta */
+#teleconsultation:checked ~ .teleconsultation-details {
+    display: block;
+}
+
+
+
+footer {
+    background-color: #fff;
+    color: #181818;;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1 1 200px; /* Ajusta para que cada coluna tenha uma largura mínima de 200px */
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-column p,
+.footer-column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #181818;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #181818;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-column {
+        flex: 1 1 100%;
+    }
+}
+
+
+/* Estilos para o formulário de cadastro */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group button {
+    background-color: #3369ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para o campo de upload de arquivo */
+.form-group input[type="file"] {
+    border: none;
+    padding: 0;
+}
+
+/* Estilo para os campos de seleção e rádio */
+.form-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.form-group input[type="radio"] + label {
+    margin-right: 15px;
+}
+
+/* Estilo para textarea */
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Seção de informações */
+.info-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+/* Estilos para o botão de carrinho de compras */
+#cart-button {
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    position: relative;
+}
+
+#cart-button #cart-count {
+    background-color: #e60000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0 5px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 0.9em;
+}
+
+/* Estilos para a seção do carrinho */
+.cart-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 10%;
+    right: 10px;
+    width: 300px;
+    z-index: 1000;
+}
+
+#cart-items {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.cart-item .item-name {
+    font-size: 1.1em;
+}
+
+.cart-item .item-price {
+    color: #e60000;
+}
+
+#checkout-button {
+    background-color: #3369ff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+#checkout-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o carrossel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 400px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botões de navegação */
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

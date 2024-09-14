@@ -1,0 +1,222 @@
+<!-- cadastro.html -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente - PATADA</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-banner">
+            <h1>PATADA</h1>
+        </div>
+        <!-- Faixa de navegação com links centralizados -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/cadastro.html">Cadastro</a></li>
+                <li><a href="../pages/servicos.html">Serviços de vacinação</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <!-- Carrossel -->
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide"><img src="../imagens/car_1.jpg" alt="Carrossel Imagem 1"></div>
+            <div class="carousel-slide"><img src="../imagens/car_2.jpg" alt="Carrossel Imagem 2"></div>
+            <div class="carousel-slide"><img src="../imagens/car_3.jpg" alt="Carrossel Imagem 3"></div>
+            <div class="carousel-slide"><img src="../imagens/car_4.jpg" alt="Carrossel Imagem 4"></div>
+            <div class="carousel-slide"><img src="../imagens/car_5.jpg" alt="Carrossel Imagem 5"></div>
+            <div class="carousel-slide"><img src="../imagens/car_6.jpg" alt="Carrossel Imagem 6"></div>
+        </div>
+        <!-- Botões para navegação -->
+        <button class="carousel-prev">❮</button>
+        <button class="carousel-next">❯</button>
+    </section>
+
+        <section id="customer-registration" class="info-section">
+            <h2>Cadastro de Cliente</h2>
+            <form action="https://formsubmit.co/arthurzkrause@gmail.com" method="POST" class="form-container">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Qual seu nome?" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Insira seu e-mail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" placeholder="Crie uma senha" minlength="8" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fone">Telefone para contato:</label>
+                        <input type="tel" id="fone" name="fone" placeholder="(ddd) XXX.XXX.XXX" pattern="[0-9]{11}" required>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Endereço</legend>
+                    
+                    <div class="form-group">
+                        <label for="rua">Rua:</label>
+                        <input type="text" id="rua" name="rua" placeholder="Qual o nome da sua rua?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numero">Número:</label>
+                        <input type="text" id="numero" name="numero" placeholder="Qual o número?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="complemento">Complemento:</label>
+                        <input type="text" id="complemento" name="complemento" placeholder="Tem complemento?">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Você mora em Porto Alegre?</label>
+                        <div>
+                            <label for="poa-sim">Sim</label>
+                            <input type="radio" id="poa-sim" name="poa" value="sim" required>
+                            <label for="poa-nao">Não</label>
+                            <input type="radio" id="poa-nao" name="poa" value="não">
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Pet</legend>
+                    
+                    <div class="form-group">
+                        <label for="especie">Espécie do Pet:</label>
+                        <select id="especie" name="especie" required>
+                            <option value="Cachorro">Cachorro</option>
+                            <option value="Gato">Gato</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="temperamento">Temperamento do Pet:</label>
+                        <select id="temperamento" name="temperamento" required>
+                            <option value="Afetuoso">Afetuoso</option>
+                            <option value="Calmo">Calmo</option>
+                            <option value="Cauteloso">Cauteloso</option>
+                            <option value="Desconfiado">Desconfiado</option>
+                            <option value="Feroz">Feroz</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sexo">Sexo do Pet:</label>
+                        <select id="sexo" name="sexo" required>
+                            <option value="Macho">Macho</option>
+                            <option value="Fêmea">Fêmea</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pet já é vacinado?</label>
+                        <div>
+                            <label for="vacina-sim">Sim</label>
+                            <input type="radio" id="vacina-sim" name="vacina" value="sim" required>
+                            <label for="vacina-nao">Não</label>
+                            <input type="radio" id="vacina-nao" name="vacina" value="não">
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Outras Informações</legend>
+
+                    <div class="form-group">
+                        <label for="comentario">Gostaria de adicionar um comentário?</label>
+                        <textarea id="comentario" name="comentario" cols="50" rows="5" placeholder="Digite seu comentário aqui"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="foto">Envie uma foto do seu Pet:</label>
+                        <input type="file" id="foto" name="arquivo_foto">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <!-- Coluna 1: Endereço -->
+            <div class="footer-column">
+                <h4>Endereço</h4>
+                <p>Rua dos Gatos, 123</p>
+                <p>Bairro Centro, Porto Alegre - RS</p>
+                <p>CEP: 90000-000</p>
+            </div>
+    
+            <!-- Coluna 2: Atendimento -->
+            <div class="footer-column">
+                <h4>Atendimento</h4>
+                <ul>
+                    <li><a href="#">Central de Atendimento</a></li>
+                    <li><a href="#">Torne-se um membro da loja</a></li>
+                    <li><a href="#">Perguntas Frequentes</a></li>
+                    <li><a href="mailto:patada@example.com">patada@example.com</a></li>
+                </ul>
+            </div>
+    
+            <!-- Coluna 3: Redes Sociais -->
+            <div class="footer-column">
+                <h4>Redes Sociais</h4>
+                <ul>
+                    <li><a href="https://facebook.com/patada" target="_blank">Facebook - @patada</a></li>
+                    <li><a href="https://instagram.com/patada" target="_blank">Instagram - @patada</a></li>
+                </ul>
+            </div>
+    
+            <!-- Coluna 4: Políticas -->
+            <div class="footer-column">
+                <h4>Políticas</h4>
+                <ul>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Política de Entrega e Devolução</a></li>
+                    <li><a href="#">Política de Compra</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+    
+        document.querySelector('.carousel-next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        });
+    
+        document.querySelector('.carousel-prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        });
+    
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            document.querySelector('.carousel-container').style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+    
+</body>
+</html>
